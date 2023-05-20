@@ -1,0 +1,86 @@
+body {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  background-color: rgb(160, 206, 224);
+}
+.component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.first {
+  padding: 30px;
+  background-color: white;
+  grid-column: 1 / span 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.first h1 {
+  color: hsl(179, 62%, 43%);
+}
+.first_p {
+  color: hsl(71, 73%, 54%);
+}
+.second_p {
+  width: 400px;
+}
+.second {
+  padding: 30px;
+  color: white;
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-left-radius: 5px;
+}
+.second span {
+  font-size: 2em;
+  color: white;
+}
+.gry {
+  color: hsl(204, 43%, 93%);
+}
+button {
+  background-color: hsl(71, 73%, 54%);
+  padding: 10px;
+  padding-inline-end: 20px;
+  width: 100%;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-block-start: 5px;
+}
+.third {
+  padding: 30px;
+  color: white;
+  background-color: hsl(175, 60%, 40%);
+  border-bottom-right-radius: 5px;
+}
+.third p {
+  color: hsl(204, 43%, 93%);
+}
+.third p {
+  margin: 2px;
+}
+
+@media screen and (max-width: 420px) {
+  .component {
+    grid-template-columns: 1fr;
+  }
+  .first {
+    grid-column: 1 / span 1;
+  }
+  .first p {
+    width: 230px;
+  }
+  .second {
+    border-bottom-left-radius: 0;
+  }
+  .third {
+    border-bottom-left-radius: 5px;
+  }
+}
